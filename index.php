@@ -44,6 +44,8 @@ $catsProducts = [
 
     <main>
         <div class="container">
+
+        <!-- SEZIONE CANI -->
             <section id="dogs-products">
 
                     <div class="d-flex justify-content-center mb-4">
@@ -53,9 +55,11 @@ $catsProducts = [
 
                 <div class="row row-cols-4 gap-5 justify-content-center text-center">
                     <?php foreach($dogsProducts as $singleDogProduct) { ?>
+                        
                     <div class="col dog-card">
-                        <figure>
+                        <figure class="position-relative">
                             <img src="<?php echo $singleDogProduct->getImageUrl()?>" alt="img">
+                            <img src="<?php echo $singleDogProduct->getIconUrl()?>" alt="dogs-icons" class="card-icon">
                         </figure>
                         
                         <h3 class="text-center mb-4 text-white"><?php echo $singleDogProduct->getType() ?></h3>
@@ -67,7 +71,9 @@ $catsProducts = [
 
             </section>
 
+            <!-- SEZIONE GATTI -->
             <section id="cats-products">
+
                 <div class="d-flex justify-content-center mb-4">
                     <h2 class="me-3">Cats Products</h2>
                     <img src="./img/icone/icona-gatto.png" alt="cat-icon" class="icon">
@@ -75,16 +81,17 @@ $catsProducts = [
 
                 <div class="row row-cols-4 gap-5 justify-content-center text-center">
 
-                <?php foreach($catsProducts as $singleCatProduct) { ?>
-                    <div class="col cat-card">
-                        <figure>
-                            <img src="<?php echo $singleCatProduct->getImageUrl()?>" alt="img">
-                        </figure>
-                    
-                        <h3 class="text-center mb-4 text-white"><?php echo $singleCatProduct->getType() ?></h3>
-                        <p class="fs-5"><b>Materiale: </b><?php echo $singleCatProduct->getMaterial() ?></p>
-                        <p class="fs-5"><b>Peso dell'articolo: </b><?php echo $singleCatProduct->getWeight() ?> kg</p>
-                    </div>
+                    <?php foreach($catsProducts as $singleCatProduct) { ?>
+                        <div class="col cat-card">
+                            <figure class="position-relative">
+                                <img src="<?php echo $singleCatProduct->getImageUrl()?>" alt="img">
+                                <img src="<?php echo $singleCatProduct->getIconUrl()?>" alt="cats-icons" class="card-icon">
+                            </figure>
+                        
+                            <h3 class="text-center mb-4 text-white"><?php echo $singleCatProduct->getType() ?></h3>
+                            <p class="fs-5"><b>Materiale: </b><?php echo $singleCatProduct->getMaterial() ?></p>
+                            <p class="fs-5"><b>Peso dell'articolo: </b><?php echo $singleCatProduct->getWeight() ?> kg</p>
+                        </div>
                     <?php } ?>
                 </div>
 
