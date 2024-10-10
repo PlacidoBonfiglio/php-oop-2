@@ -1,5 +1,4 @@
 <?php 
-
 require_once __DIR__ . "/Products.php";
 
 // Estendo le categorie di classe Product
@@ -34,7 +33,7 @@ class DogsCategory extends Product{
     }
 }
 
-// Creo un oggetto
+// Creo oggetti
 $dogHouse = new DogsCategory("./img/cuccia.jpg", "Cuccia per cani", "Legno", 10.5);
 
 $dogToy = new DogsCategory("./img/gioco-per-cani-kong.webp", "Giocattolo per cani", "Plastica", 0.2);
