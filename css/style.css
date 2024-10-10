@@ -1,0 +1,17 @@
+img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.col {
+    background-color: rgb(164, 201, 255);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid rgb(255, 216, 223);
+}
+
+.col:hover {
+    box-shadow: 0 0 10px grey;
+    scale: 1.1;
+    cursor: pointer;
+}

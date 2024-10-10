@@ -1,8 +1,16 @@
 <!-- PHP -->
 <?php 
+
 require_once __DIR__ . "/classes/Products.php";
 require_once __DIR__ . "/classes/DogsCategory.php";
 require_once __DIR__ . "/classes/CatsCategory.php";
+
+// Creo un array che contienene i prodotti per cani
+$dogsProducts = [
+    $dogHouse,
+    $dogToy,
+    $dogFood,
+];
 
 ?>
 
@@ -28,7 +36,26 @@ require_once __DIR__ . "/classes/CatsCategory.php";
     </header>
 
     <main>
-        
+        <div class="container">
+            <section id="dogs-products">
+                <div class="row row-cols-4 gap-5 justify-content-center text-center">
+
+                    <?php foreach($dogsProducts as $singleDogProduct) { ?>
+                    <div class="col">
+                        <figure>
+                            <img src="<?php echo $singleDogProduct->getImageUrl()?>" alt="img">
+                        </figure>
+                        
+                        <h3 class="text-center mb-4"><?php echo $singleDogProduct->getType() ?></h3>
+                        <p class="fs-5"><b>Materiale: </b><?php echo $singleDogProduct->getMaterial() ?></p>
+                        <p class="fs-5"><b>Peso dell'articolo: </b><?php echo $singleDogProduct->getWeight() ?> kg</p>
+                    </div>
+                    <?php } ?>
+                </div>
+            </section>
+
+           
+        </div>
     </main>
 </body>
 
