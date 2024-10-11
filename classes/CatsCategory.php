@@ -48,7 +48,7 @@ class CatsCategory extends Product{
 // Creo oggetti
 $catHouse = new CatsCategory("./img/casetta-gatti_.jpg", "Casetta per gatti", "Legno", 3.2, "./img/icone/cuccia.png", 45.98);
 
-$catToy = new CatsCategory("./img/gioco-gatti.jpg", "Giocattolo per gatti", "Plastica", 0.1, "./img/icone/icona-giochi.png", 3.50);
+$catToy = new CatsCategory("./img/gioco-gatti.jpg", "Giocattolo per gatti", "Plastica", 0.1, "./img/icone/icona-giochi.png", 2.79);
 
 $catFood = new CatsCategory("./img/cibo-gatti.jpg", "Cibo per gatti", "Salmone", 1.5, "./img/icone/icona-cibo.webp", 10.85);
 

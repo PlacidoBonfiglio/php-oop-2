@@ -50,6 +50,6 @@ $dogHouse = new DogsCategory("./img/cuccia.jpg", "Cuccia per cani", "Legno", 10.
 
 $dogToy = new DogsCategory("./img/gioco-per-cani-kong.webp", "Giocattolo per cani", "Plastica", 0.2, "./img/icone/icona-giochi.png", 3.99);
 
-$dogFood = new DogsCategory("./img/crocchette-cane-adulti-otto-20-kg.webp", "Croccantini per cani", "Manzo", 20, "./img/icone/icona-cibo.webp", 28.50);
+$dogFood = new DogsCategory("./img/crocchette-cane-adulti-otto-20-kg.webp", "Croccantini per cani", "Manzo", 20, "./img/icone/icona-cibo.webp", 28.59);
 
 ?>
