@@ -21,18 +21,13 @@ img {
 
 .col {
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0 0 10px grey;
+    background-color: black;
 }
 
-.dog-card {
-    background-color: rgb(164, 201, 255);
-    border: 2px solid rgb(149, 195, 255);
-}
-
-.cat-card {
-    background-color: rgb(102, 211, 144);
-    border: 2px solid rgb(110, 216, 133);
+p {
+    color: lightgray;
 }
 
 .card-icon {
