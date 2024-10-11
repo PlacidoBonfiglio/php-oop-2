@@ -65,6 +65,7 @@ $catsProducts = [
                         <h3 class="text-center mb-4 text-white"><?php echo $singleDogProduct->getType() ?></h3>
                         <p class="fs-5"><b>Materiale: </b><?php echo $singleDogProduct->getMaterial() ?></p>
                         <p class="fs-5"><b>Peso dell'articolo: </b><?php echo $singleDogProduct->getWeight() ?> kg</p>
+                        <p class="fs-5"><b>Prezzo: </b><?php echo $singleDogProduct->getPrice() ?> €</p>
                     </div>
                     <?php } ?>
                 </div>
@@ -91,6 +92,7 @@ $catsProducts = [
                             <h3 class="text-center mb-4 text-white"><?php echo $singleCatProduct->getType() ?></h3>
                             <p class="fs-5"><b>Materiale: </b><?php echo $singleCatProduct->getMaterial() ?></p>
                             <p class="fs-5"><b>Peso dell'articolo: </b><?php echo $singleCatProduct->getWeight() ?> kg</p>
+                            <p class="fs-5"><b>Prezzo: </b><?php echo $singleCatProduct->getPrice() ?> €</p>
                         </div>
                     <?php } ?>
                 </div>
