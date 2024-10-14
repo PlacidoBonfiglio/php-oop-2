@@ -46,17 +46,18 @@ $catsProducts = [
 
 
     <?php
+    // ! PRENDERE CORRETTAMENTE TRAITS E EXCEPTION
     //$_image, $_type, $_material, $_weight, $_category,$this->expire_date = $_expire_date,$this->quantityProduct = $_quantityProduct
     //$dogFood = new Food("./img/crocchette-cane-adulti-otto-20-kg.webp", "Croccantini per cani", "Manzo", 20, "dog", 'Oggi', 2);
 
     //try{
         //if($dogFood->isSellable()){
-            //echo 'si può vendere';
+            //echo $singleDogProduct->getQuantity();
         //}else{
-            //echo 'finito';
+            //echo 'Prodotto esaurito';
         //}
-    //}catch(){
-
+    //}catch(exception $exception){
+        //echo $exception->getMessage()
     //}
     ?>
 
