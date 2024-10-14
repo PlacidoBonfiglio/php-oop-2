@@ -93,8 +93,8 @@ $catsProducts = [
                                     } else {
                                         echo 'Prodotto esaurito';
                                     }
-                                } catch(exception) {
-                                    echo $InvalidArgumentException;
+                                } catch(exception $exception) {
+                                    echo $exception->getMessage();
                                 }
                             ?>
                         </p>
