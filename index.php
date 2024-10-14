@@ -4,6 +4,8 @@
 require_once __DIR__ . "/classes/Products.php";
 require_once __DIR__ . "/classes/DogsCategory.php";
 require_once __DIR__ . "/classes/CatsCategory.php";
+require_once __DIR__ . "/classes/Food.php";
+
 
 // Creo un array che contienene i prodotti per cani
 $dogsProducts = [
@@ -42,6 +44,24 @@ $catsProducts = [
         <h1 class="text-center fw-bold py-5">PHP OOP 2</h1>
     </header>
 
+
+    <?php
+    //$_image, $_type, $_material, $_weight, $_category,$this->expire_date = $_expire_date,$this->quantityProduct = $_quantityProduct
+    //$dogFood = new Food("./img/crocchette-cane-adulti-otto-20-kg.webp", "Croccantini per cani", "Manzo", 20, "dog", 'Oggi', 2);
+
+    //try{
+        //if($dogFood->isSellable()){
+            //echo 'si può vendere';
+        //}else{
+            //echo 'finito';
+        //}
+    //}catch(){
+
+    //}
+    ?>
+
+
+
     <main>
         <div class="container">
 
@@ -65,6 +85,19 @@ $catsProducts = [
                         <h3 class="text-center mb-4 text-white"><?php echo $singleDogProduct->getType() ?></h3>
                         <p class="fs-5"><b>Materiale: </b><?php echo $singleDogProduct->getMaterial() ?></p>
                         <p class="fs-5"><b>Peso dell'articolo: </b><?php echo $singleDogProduct->getWeight() ?> kg</p>
+                        <p class="fs-5"><b>Articoli disponibili: </b>
+                            <?php 
+                                try{
+                                    if ($singleDogProduct->getQuantity() > 0){
+                                    echo $singleDogProduct->getQuantity();
+                                    } else {
+                                        echo 'Prodotto esaurito';
+                                    }
+                                } catch(exception) {
+                                    echo $InvalidArgumentException;
+                                }
+                            ?>
+                        </p>
                         <p class="fs-5"><b>Prezzo: </b><?php echo $singleDogProduct->getPrice() ?> €</p>
                     </div>
                     <?php } ?>
@@ -92,6 +125,19 @@ $catsProducts = [
                             <h3 class="text-center mb-4 text-white"><?php echo $singleCatProduct->getType() ?></h3>
                             <p class="fs-5"><b>Materiale: </b><?php echo $singleCatProduct->getMaterial() ?></p>
                             <p class="fs-5"><b>Peso dell'articolo: </b><?php echo $singleCatProduct->getWeight() ?> kg</p>
+                            <p class="fs-5"><b>Articoli disponibili: </b>
+                                <?php 
+                                    try{
+                                        if ($singleCatProduct->getQuantity() > 0){
+                                        echo $singleCatProduct->getQuantity();
+                                        } else {
+                                            echo 'Prodotto esaurito';
+                                        }
+                                    } catch(exception) {
+                                        echo $InvalidArgumentException;
+                                    }
+                                ?>
+                            </p>
                             <p class="fs-5"><b>Prezzo: </b><?php echo $singleCatProduct->getPrice() ?> €</p>
                         </div>
                     <?php } ?>
